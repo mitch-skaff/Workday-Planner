@@ -1,13 +1,16 @@
+// function set to be ran at opening of page
 $(document).ready(function () {
 
     var saveBtn = $('.saveBtn');
 
+    // when save button is clicked, input and time are saved to local storage
     saveBtn.on('click', function() {
         console.log("test");
 
         var userInput = $(this).siblings('.description').val();
         var time = $(this).parent().attr('id')
 
+        // conditional set up so if user inputs nothing they are alerted
         if (userInput === "") {
             alert("Please enter an appointment to save to calendar!")}
         else {
@@ -16,6 +19,7 @@ $(document).ready(function () {
         }
     })
     
+    // create function to display current date and hour, updated every second
     function dateTime() {
         now = moment().format('MMMM Do, YYYY [at] hh:mm:ss a');
         document.getElementById('currentDay').innerHTML = now;
@@ -24,6 +28,7 @@ $(document).ready(function () {
         }, 1000);
     };
 
+    // update each rows display based on past, present, future
     function scheduleUpdater () {
         var currentTime = moment().hour();
         var timeBlock = $(".time-block");
@@ -50,6 +55,7 @@ $(document).ready(function () {
         }
     }
 
+    // get items that were saved to local storage and display on page
 
     $('#hour-9 .description').val(localStorage.getItem("hour-9"));
     $('#hour-10 .description').val(localStorage.getItem("hour-10"));
