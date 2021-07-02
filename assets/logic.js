@@ -50,7 +50,7 @@ $(document).ready(function () {
             } else {
                 $(hourRow).addClass("future");
                 $(hourRow).removeClass("past");
-                $$(hourRow).removeClass("present");
+                $(hourRow).removeClass("present");
             }
         }
     }
