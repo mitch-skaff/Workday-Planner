@@ -4,6 +4,6 @@ This is a simple, yet dynamic calendar application where a user can set appointm
 
 This application was built using HTML, CSS, JavaScript, JQuery, Bootstrap, and Moment.js.
 
-
+Check out the deployed link here: https://mitch-skaff.github.io/Workday-Planner/
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./assets/05-third-party-apis-homework-demo.gif)
